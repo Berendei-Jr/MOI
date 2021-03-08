@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
 
@@ -44,18 +44,7 @@ int Count_pluses(unsigned int& p, unsigned int* ARR1, unsigned int* ARR2) {
 				break;
 			}
 		}
-		if (i == ((p + 1) / 8)) {
-			cout << "Завершено на 25%...\n";
-		}
-		if (i == ((p + 1) / 4)) {
-			cout << "Завершено на 50%...\n";
-		}
-		if (i == ((p + 1) / 8 * 3)) {
-			cout << "Завершено на 75%...\n";
-		}
-		if (i == ((p + 1) / 2)) {
-			cout << "Завершено на 100%...\n";
-		}
+		cout <<"\r"<<(i*100/((p+1)/2));
 	}
 	return k * 2;
 }
@@ -71,7 +60,7 @@ label0:
 			goto label0;
 		}
 		Check(p, index_0, length, ARR1, ARR2);
-		cout << "index = " << index_0;
+		cout << "Диапазон: " << index_0<<" - "<<index_0+length;
 		return index_0;
 	}
 
@@ -112,7 +101,7 @@ label:
 	c = 0;
 	cout << "\n   Введите значение константы С: "; cin >> c;
 	const int length = floor(c * (log(p) / log(2) + log((log(p) / log(2)) / log(2))));  //C(Log2(p) +log2(log2(p)))
-	cout << "L = " << length << endl;
+	cout << "Длина отрезка = " << length << endl;
 
 label1:
 	int index;
@@ -126,5 +115,7 @@ label1:
 
 	for (int i = 0; i < 20; i++)index = Move(p, index, length, ARR1, ARR2);
 
+	//cout<< Count_pluses(p, ARR1, ARR2)<<endl;
+	//cout<<"Завершение работы";
 	return 0;
 }
