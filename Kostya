@@ -1,0 +1,56 @@
+# include<iostream>
+#include <fstream>
+#include <unordered_map>
+#include <string>
+using namespace std;
+int main() {
+//    ifstream fin("D:/moi/primes1.txt");
+//    if (!fin.is_open())
+//    {
+//        return 1;
+//    }
+    int start, p;
+    //int finish;
+    cin >> start;
+    //cin >> finish;
+    long long q;
+    string str;
+    unordered_map <unsigned long long, int> v;
+//    for (int i = 1; i < start; i++)
+//    {
+//        fin.ignore(20, '\n');
+//        cout << "\b\b\b\b" << (i + 1) * 100 / start << "%";
+//    }
+    cout << "\n";
+    for (int j = start; j < start+1; j++) {
+
+        //fin >> str;
+//        while (str[0] != '0'&& str[0] != '1'&& str[0] != '2'&& str[0] != '3'&& str[0] != '4'&& str[0] != '5'&& str[0] != '6'&& str[0] != '7'&& str[0] != '8'&& str[0] != '9')
+//        {
+//            str.erase(0, 1);
+//        }
+        q = start;
+        //str = "D:/moi/bin/" + to_string(q);
+        //ofstream fout(str);
+        cout << j << "\n";
+        for (int i = 1; i < q; i++) {
+            p = (i*i)%q;
+            if (p==1){
+                cout << i << "\n";
+            }
+//            else{
+//                v[p] = 1;
+//            }
+            //cout << "\b\b\b\b" << (i + 1) * 100 / q << "%";
+        }
+        cout << "\n";
+        //q = 0;
+//        for (int i = 1; i < q; i++) {
+//            if (v[i]) {
+//                cout << v[i];
+//            } else cout << 0;
+//        }
+        //fout.close();
+        v.clear();
+    }
+}
